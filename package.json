@@ -1,0 +1,29 @@
+{
+  "name": "flex-layout",
+  "version": "0.0.1",
+  "description": "cross platform flexbox layout",
+  "main": "./dist/flex-layout.css",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.0.5",
+    "gulp-rename": "^1.2.2",
+    "less-plugin-autoprefix": "^1.5.1",
+    "less-plugin-clean-css": "^1.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/huanz/flex-layout.git"
+  },
+  "keywords": [
+    "flexbox",
+    "css3",
+    "layout",
+    "grid"
+  ],
+  "author": "huanz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/huanz/flex-layout/issues"
+  },
+  "homepage": "https://github.com/huanz/flex-layout"
+}

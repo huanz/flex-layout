@@ -1,0 +1,80 @@
+@screen-xs: 480px;
+@screen-sm: 768px;
+@screen-md: 992px;
+@screen-lg: 1200px;
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.flex-row,
+.flex-column {
+    display: flex;
+    flex-wrap: wrap;
+    &.flex-norwap {
+        flex-wrap: no-wrap;
+    }
+    &.flex-rewrap {
+        flex-wrap: wrap-reverse;
+    }
+    &.flex-between {
+		justify-content: space-between;
+	}
+    &.flex-around {
+		justify-content: space-around;
+    }
+}
+
+.flex-row {
+    flex-direction: row;
+    &.reverse {
+        flex-direction: row-reverse;
+    }
+    &.flex-left {
+		justify-content: flex-start;
+	}
+	&.flex-right {
+		justify-content: flex-end;
+	}
+	&.flex-top {
+		align-items: flex-start;
+	}
+	&.flex-bottom {
+		align-items: flex-end;
+	}
+	&.flex-center {
+		justify-content: center;
+	}
+	&.flex-middle {
+		align-items: center;
+	}
+
+}
+
+.flex-column {
+    flex-direction: column;
+    &.reverse {
+        flex-direction: column-reverse;
+    }
+    &.flex-left {
+		align-items: flex-start;
+	}
+	&.flex-right {
+		align-items: flex-end;
+	}
+	&.flex-top {
+		justify-content: flex-start;
+	}
+	&.flex-bottom {
+		justify-content: flex-end;
+	}
+	&.flex-center {
+		align-items: center;
+	}
+    &.flex-middle {
+		justify-content: center;
+	}
+}

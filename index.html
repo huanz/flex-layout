@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>flex-layout</title>
+    <link rel="stylesheet" href="./dist/flex-layout.css">
+    <style>
+        a {
+            text-decoration: none;
+            color: #007FFF;
+            padding: 0 0 .2rem;
+            font-weight: 700
+        }
+        
+        a:hover {
+            color: #007FFF
+        }
+        
+        :focus {
+            outline-color: transparent;
+            outline-style: none
+        }
+        
+        pre {
+            overflow-x: auto;
+            padding: 1.25em;
+            border: 1px solid #e6e6e6;
+            border-left-width: 5px;
+            margin: 1.6em 0;
+            font-size: .875em;
+            background: #fcfcfc;
+            white-space: pre;
+            word-wrap: normal
+        }
+        
+        code {
+            color: #007FFF;
+            font-family: monospace, serif;
+            font-size: 1em
+        }
+        
+        body {
+            padding: 0;
+            margin: 0;
+            font-size: 18px;
+            font-weight: 400;
+            background: #eee;
+            line-height: 1.4rem;
+            font-family: fantasy;
+        }
+        
+        .header {
+            padding: 2rem;
+            background: #fff;
+        }
+        .header h1 {
+            font-size: 6rem;
+        }
+        .btn {
+            padding: 0.4rem 4rem;
+            margin: 1rem;
+            border: 1px solid #007FFF;
+            color: #007FFF;
+            font-size: 1.25rem;
+            transition: background-color, .15s;
+        }
+        
+        .btn:hover {
+            background: #39F;
+            border-color: #39F;
+            color: #FFF;
+            text-shadow: 0 1px #007FFF
+        }
+        
+        .btn:active {
+            background: #007FFF;
+            color: #FFF;
+            border-top: 2px solid #06C
+        }
+        .container {
+            padding: 2rem 1rem;
+        }
+        .container h1 {
+            font-size: 2.5rem;
+        }
+        .container .flex-row {
+            background: #007FFF;
+            min-height: 100px;
+        }
+        .box {
+            padding: 1rem;
+            background: #036;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header flex-column flex-center">
+        <h1>Flex Layout</h1>
+        <a class="btn" href="https://github.com/huanz/flex-layout" target="_blank">Github</a>
+    </header>
+    <section class="container">
+        <h1>Flex Row</h1>
+        <h2>Grid</h2>
+        <div class="flex-row flex-middle">
+            <div class="box flex-md-3">1</div>
+            <div class="box flex-md-6">2</div>
+            <div class="box flex-md-3">3</div>
+        </div>
+        <pre><code>&lt;div class="flex-row flex-middle">
+    &lt;div class="box flex-md-3">1&lt;/div>
+    &lt;div class="box flex-md-6">2&lt;/div>
+    &lt;div class="box flex-md-3">3&lt;/div>
+&lt;/div></code></pre>
+        <h2>Offset</h2>
+        <div class="flex-row flex-middle">
+            <div class="box flex-md-3 flex-md-offset-3">1</div>
+            <div class="box flex-md-2">2</div>
+            <div class="box flex-md-4">3</div>
+        </div>
+        <pre><code>&lt;div class="flex-row flex-middle">
+    &lt;div class="box flex-md-3 flex-md-offset-3">1&lt;/div>
+    &lt;div class="box flex-md-3">2&lt;/div>
+    &lt;div class="box flex-md-3">3&lt;/div>
+&lt;/div></code></pre>
+        <h2>Alignment</h2>
+        <h4><code>left</code></h4>
+        <div class="flex-row flex-left">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <pre><code>&lt;div class="flex-row flex-left">
+    &lt;div class="box">1&lt;/div>
+    &lt;div class="box">2&lt;/div>
+    &lt;div class="box">3&lt;/div>
+&lt;/div></code></pre>
+        <h4><code>right</code></h4>
+        <div class="flex-row flex-right">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <pre><code>&lt;div class="flex-row flex-right">
+    &lt;div class="box">1&lt;/div>
+    &lt;div class="box">2&lt;/div>
+    &lt;div class="box">3&lt;/div>
+&lt;/div></code></pre>
+        <h4><code>top</code></h4>
+        <div class="flex-row flex-top">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <pre><code>&lt;div class="flex-row flex-top">
+    &lt;div class="box">1&lt;/div>
+    &lt;div class="box">2&lt;/div>
+    &lt;div class="box">3&lt;/div>
+&lt;/div></code></pre>
+        <h4><code>bottom</code></h4>
+        <div class="flex-row flex-bottom">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <pre><code>&lt;div class="flex-row flex-bottom">
+    &lt;div class="box">1&lt;/div>
+    &lt;div class="box">2&lt;/div>
+    &lt;div class="box">3&lt;/div>
+&lt;/div></code></pre>
+        <h4><code>center</code></h4>
+        <div class="flex-row flex-center">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <pre><code>&lt;div class="flex-row flex-center">
+    &lt;div class="box">1&lt;/div>
+    &lt;div class="box">2&lt;/div>
+    &lt;div class="box">3&lt;/div>
+&lt;/div></code></pre>
+        <h4><code>middle</code></h4>
+        <div class="flex-row flex-middle">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <pre><code>&lt;div class="flex-row flex-middle">
+    &lt;div class="box">1&lt;/div>
+    &lt;div class="box">2&lt;/div>
+    &lt;div class="box">3&lt;/div>
+&lt;/div></code></pre>
+        <h4><code>between</code></h4>
+        <div class="flex-row flex-between">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <pre><code>&lt;div class="flex-row flex-between">
+    &lt;div class="box">1&lt;/div>
+    &lt;div class="box">2&lt;/div>
+    &lt;div class="box">3&lt;/div>
+&lt;/div></code></pre>
+        <h4><code>around</code></h4>
+        <div class="flex-row flex-around">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <pre><code>&lt;div class="flex-row flex-around">
+    &lt;div class="box">1&lt;/div>
+    &lt;div class="box">2&lt;/div>
+    &lt;div class="box">3&lt;/div>
+&lt;/div></code></pre>
+        <h2>Order</h2>
+        <h4><code>first</code></h4>
+        <div class="flex-row">
+            <div class="box">1</div>
+            <div class="box flex-first">2</div>
+            <div class="box">3</div>
+        </div>
+        <pre><code>&lt;div class="flex-row">
+    &lt;div class="box">1&lt;/div>
+    &lt;div class="box flex-first">2&lt;/div>
+    &lt;div class="box">3&lt;/div>
+&lt;/div></code></pre>
+        <h4><code>last</code></h4>
+        <div class="flex-row">
+            <div class="box">1</div>
+            <div class="box flex-last">2</div>
+            <div class="box">3</div>
+        </div>
+        <pre><code>&lt;div class="flex-row">
+    &lt;div class="box">1&lt;/div>
+    &lt;div class="box flex-last">2&lt;/div>
+    &lt;div class="box">3&lt;/div>
+&lt;/div></code></pre> 
+        <h2>Reverse</h2>
+        <h4><code>reverse</code></h4>
+        <div class="flex-row flex-between flex-reverse">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <pre><code>&lt;div class="flex-row flex-between flex-reverse">
+    &lt;div class="box">1&lt;/div>
+    &lt;div class="box">2&lt;/div>
+    &lt;div class="box">3&lt;/div>
+&lt;/div></code></pre>            
+    </section>
+</body>
+
+</html>

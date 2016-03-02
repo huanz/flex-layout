@@ -17,6 +17,8 @@
 .@{prefix}-row,
 .@{prefix}-column {
     display: flex;
+    max-height: 100%;
+    width: 100%;
     flex-wrap: wrap;
     &.@{prefix}-norwap {
         flex-wrap: no-wrap;
@@ -67,7 +69,10 @@
 	&.@{prefix}-middle {
 		align-items: center;
 	}
-
+    &.@{prefix}-auto {
+        position: relative;
+        flex: 1 1 0;
+    }
 }
 
 .@{prefix}-column {

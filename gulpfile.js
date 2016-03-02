@@ -4,7 +4,7 @@ var less = require('gulp-less');
 var LessPluginCleanCSS = require('less-plugin-clean-css');
 var LessPluginAutoPrefix = require('less-plugin-autoprefix');
 var cleancss = new LessPluginCleanCSS({ advanced: true });
-var autoprefix = new LessPluginAutoPrefix({ browsers: ["last 2 versions"] });
+var autoprefix = new LessPluginAutoPrefix({ browsers: ['> 1%', 'last 2 versions', 'ie 10'] });
 
 var input = './src/flex-layout.less';
 var output = './dist';
